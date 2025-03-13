@@ -24,6 +24,7 @@ class Game {
     getUser_name(){
         return this.#user_name;
     }
+
     setVida(decremento){
         this.#vida -= decremento;
     }
@@ -39,6 +40,12 @@ class Game {
         let masEnergia = this.getEnergia() + aumento;
         this.#energia = masEnergia > 90 ? 90 : masEnergia;
     }
+    setSemilla(aumento){
+        let masSemilla = this.getSemilla() + aumento;
+        this.#semilla = masSemilla > 3 ? 3 : masSemilla;
+
+    }
+
     atk_basico(jugador){
         this.#ki -= this.#ki < 5 ? 0 : 5;
         this.#energia -= this.#energia < 10 ? 0 : 10;
